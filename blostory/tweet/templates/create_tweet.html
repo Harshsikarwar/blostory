@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="blogFormContainer">
+        <h1 class="containerTitle" style="color: black;">Create Post</h1>
+        <form class="tweet_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label class="tweet_label">User</label>
+            <input class="tweet_input" name="username" value={{user}} type="text" readonly>
+            <label class="tweet_label">Title</label>
+            <input class="tweet_input" name="title" maxlength="20" value=--title-- type="text" required>
+            <label class="tweet_label">Content</label>
+            <textarea class="tweet_content" name="text" type="text" required></textarea>
+            <label class="tweet_label">Image</label>
+            <input class="tweet_input" name="image" type="file" required>
+            <button type="submit">Create Post</button>
+        </form>
+    </div>
+{% endblock %}

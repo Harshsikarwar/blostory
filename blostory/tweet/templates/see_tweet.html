@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="blogFullPost">
+    <img class="blogImg" src="{{blog.image.url}}">
+    {% if blog.user == user %}
+        <div class="blogUserBox">
+            <a class="blogUserBtn" href="/tweet/{{blog.id}}/edit-tweet/">Edit</a>
+            <a class="blogUserBtn" href="/tweet/{{blog.id}}/delete-tweet/">Delete</a>
+        </div>
+    {% endif %}
+    <h2 class="blogTitle">{{blog.title}}</h2>
+    <h3 class="blogAuthor">Blog by - <b style="color: orangered;">{{blog.user}}</b></h3>
+    <p class="blogContent">{{blog.text}}</p>
+</div>
+{% endblock %}

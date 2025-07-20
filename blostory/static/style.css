@@ -1,0 +1,196 @@
+body{
+    background-color: rgb(1, 6, 29);
+}
+
+.title{
+    display: flex;
+    justify-self: center;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 34px;
+    font-family:monospace;
+    font-weight: 800;
+    color: black;
+    margin: 10px;
+}
+
+.loginBox{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-self: center;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    margin: 10px 0px 0px 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 20px;
+    align-self: center;
+}
+
+input{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    background-color: transparent;
+    margin: 0px 0px 10px 10px;
+    border-color: black;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0px 10px 10px;
+}
+
+button{
+    font-size: 18px;
+    border-radius: 10px;
+    margin: 10px;
+    border-style: solid;
+    border-width: 0px;
+    background-color: rgb(209, 209, 209);
+}button:hover{
+    background-color: orangered;
+    color: white;
+}
+
+p{
+    margin: 10px 0px 10px 15px;
+}
+
+.clickHere{
+    font-size: 18px;
+    text-decoration: none;
+    color: orangered;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    background-color:rgb(247, 247, 247);
+}
+
+.navTitle{
+    color: black;
+    margin-left: 2px;
+}
+
+.navImg{
+    height: 50px;
+    width: 50px;
+    margin: 5px 5px 0px 10px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: black;
+}
+
+li{
+    margin: 20px 20px 0px 20px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.authMessage{
+    margin-left: 10px;
+}
+
+.side_menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0px;
+    top:60px;
+    --posX:1000px;
+    transform: translateX(var(--posX));
+    transition: all 0.5s ease-in-out;
+    background-color: rgb(247, 247, 247);
+}
+
+.side_menu_list{
+    flex-direction: column;
+    text-align: left;
+    padding: 0px;
+}
+
+.side_menu_option{
+    margin-left: 10px;
+}
+
+.menuBurger{
+    display: none;
+}
+
+.menuBurgerImg{
+    height: 30px;
+    width: 30px;
+}
+
+@media(max-width:629px){
+    ul{
+        width: 90%;
+        justify-content: right;
+    }
+    .menuBurger{
+        display: block;
+    }
+    #longMenu{
+        display: none;
+    }
+}
+
+@media(max-width:330px){
+    .menuOptions{
+        margin-left: 0px;
+        padding: 0px;
+    }
+    .navTitle{
+        font-size: 28px;
+        line-height: 50px;
+    }
+    .navImg{
+        width: 40px;
+        height: 40px;
+        margin-top: 15px;
+    }
+}

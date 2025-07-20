@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="blogFormContainer">
+        <h1 class="containerTitle" style="color: black;">Edit Post</h1>
+        <form class="tweet_form" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% if blog.user == user %}
+            <label class="tweet_label">User</label>
+            <input class="tweet_input" name="username" value={{blog.user}} type="text" readonly>
+            <label class="tweet_label">Title</label>
+            <input class="tweet_input" name="title"value='{{ blog.title|default_if_none:""|escape }}' maxlength="20" type="text" required>
+            <label class="tweet_label">Content</label>
+            <textarea class="tweet_content" name="text" type="text" required>{{blog.text}}</textarea>
+            <label class="tweet_label">Image</label>
+            <input class="tweet_input"  name="image" type="file">
+            <button type="submit">Edit Post</button>
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}

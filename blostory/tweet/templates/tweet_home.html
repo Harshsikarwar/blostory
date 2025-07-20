@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="blogContainer">
+    <form method="post" enctype="multipart/form-data" class="homeForm">
+        {% csrf_token %}
+        {% for message in messages %}
+            <p class="">{{message}}</p>
+        {% endfor %}
+        <input name="query" class="homeInput" type="text" placeholder="search by userId" required>
+        <button class="homeBtn" type="submit">Search</button>
+    </form>
+    <h1 class="containerTitle">Blogs</h1>
+    <div class="blogList">
+        {% for blog in blogpost %}
+        <div class="blogPost">
+            <img class="blogPreviewImg" src="{{blog.image.url}}">
+            <h2 class="blogPreviewTitle">{{blog.title}}</h2>
+            <h3 class="blogPreviewAuthor">Blog by - <b style="color: orangered;">{{blog.user}}</b></h3>
+            <a class="blogSeeBtn" href="{{blog.id}}/see-tweet/">see full</a>
+            {% if blog.user == user %}
+            <div class="blogUserPreviewBox">
+                <a class="blogUserBtn" href="{{blog.id}}/edit-tweet/">Edit</a>
+                <a class="blogUserBtn" href="{{blog.id}}/delete-tweet/">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

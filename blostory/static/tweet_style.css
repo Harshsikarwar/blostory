@@ -1,0 +1,233 @@
+.blogContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerTitle{
+    font-size: 34px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.blogList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.blogPost{
+    display: flex;
+    flex-direction: column;
+    width:210px;
+    height: fit-content;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    align-items: center;
+    margin: 10px;
+}
+
+.blogPreviewImg{
+    height: 150px;
+    width: 200px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.blogPreviewTitle{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: black;
+    margin: 5px;
+    text-align: left;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.blogPreviewAuthor{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.blogSeeBtn{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+    background-color: orangered;
+    border-radius: 20px;
+    color:white;
+    width: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+.blogUserBtn{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+    background-color: orangered;
+    border-radius: 20px;
+    color:white;
+    width: 80px;
+    text-align: center;
+    margin: 5px;
+}
+
+.blogUserPreviewBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.blogUserBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: start;
+    margin-left: 10px;
+}
+
+.blogFormContainer{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-self: center;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.tweet_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tweet_label{
+    margin-right: 10px;
+    margin-bottom: 2px;
+}
+
+.tweet_input{
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.tweet_content{
+    resize: none;
+    height: 250px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border-width: 2px;
+    outline-width: 10px;
+    margin: 10px;
+}
+
+.blogFullPost{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width:70%;
+    height: fit-content;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    align-items: center;
+    margin: 20px;
+}
+
+.blogImg{
+    height: 350px;
+    width: 98%;
+    margin: 10px 0px 5px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.blogTitle{
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: black;
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.blogAuthor{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: black;
+    padding-left: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.blogContent{
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: black;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+.homeForm{
+    background-color: rgb(247, 247, 247);
+    margin-bottom: 30px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.homeInput{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+@media(max-width:479px){
+    .blogPost{
+        width: 180px;
+    }
+    .blogPreviewImg{
+        width: 160px;
+    }
+    .blogSeeBtn{
+        width: 120px;
+    }
+}
+
+@media(max-width:419px){
+    .blogList{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .blogPost{
+        width: 80%;
+    }
+    .blogPreviewImg{
+        width: 97%;
+    }
+    .homeInput, .homeBtn{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:330px){
+    .containerTitle{
+        font-size: 24px;
+    }
+    .tweet_input{
+        font-size: 16px;
+    }
+}
