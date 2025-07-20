@@ -10,7 +10,6 @@ from django.db.models import F
 
 # Create your views here.
 
-
 def homePage(request):
     blogpost = BlogPost.objects.all().order_by("-create_at")
     if request.method == "POST":
@@ -23,6 +22,9 @@ def homePage(request):
             messages.warning(request, "No post exists")
             return render(request, "tweet_home.html", {"blogpost":blogpost})
     return render(request, "tweet_home.html", {"blogpost":blogpost})
+
+def viewIndex(request):
+    return redirect(homePage)
 
 @login_required()
 def createTweet(request):

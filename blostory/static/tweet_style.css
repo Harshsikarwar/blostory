@@ -223,6 +223,12 @@
     }
 }
 
+@media(max-width:580px){
+    .blogFullPost{
+        width: 90%;
+    }
+}
+
 @media(max-width:330px){
     .containerTitle{
         font-size: 24px;

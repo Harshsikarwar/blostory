@@ -21,7 +21,7 @@ h1{
 .loginBox{
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 60%;
     justify-self: center;
     background-color: white;
     color: black;
@@ -44,7 +44,7 @@ h2{
 form{
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
     margin: 20px;
     align-self: center;
 }
@@ -56,7 +56,7 @@ input{
     border-style: solid;
     border-width: 0px 0px 2px 0px;
     background-color: transparent;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 10px 10px 10px;
     border-color: black;
 }
 
@@ -138,7 +138,7 @@ a{
 .side_menu{
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     right: 0px;
     top:60px;
     --posX:1000px;
@@ -179,6 +179,12 @@ a{
     }
 }
 
+@media(max-width:480px){
+    .loginBox{
+        width: 70%;
+    }
+}
+
 @media(max-width:330px){
     .menuOptions{
         margin-left: 0px;
@@ -192,5 +198,16 @@ a{
         width: 40px;
         height: 40px;
         margin-top: 15px;
+    }
+    #loginBox{
+        width: 95%;
+    }
+    #logo{
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+    }
+    h1{
+        font-size: 28px;
     }
 }
